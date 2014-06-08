@@ -13,20 +13,21 @@
 		h3{font-size:24px;margin:5px;}
 		#repos li{list-style-type: none;}
 		#repos li p{line-height:1.1em;margin:0;text-indent:2em;}
+		.ms-controller, [ms-controller]{ display:none}
 	</style>
 	<script type="text/javascript" src="./avalon.min.js"></script>
 </head>
 <body class="zh_CN">
-	<div id="home" ms-controller="home">
+	<div id="home" class="ms-controller" ms-controller="home">
 	<p>Hello World!    SenYu 's Github Home Page.</p>
 	<p>Sen Yu, Student from Dalian University of Technology, majored in Computer Sience, <a id="time">{{time}}</a> his two months Internship As a Front-End Developer at Alibaba Group from June 26, 2014 to August 26, 2014.</p>
 	<p>mailto:<a href="mailto:senyu@mail.dlut.edu.cn">senyu@mail.dlut.edu.cn</a></p>	
 	</div>
-	<div id="repos" ms-controller="repos">
+	<div id="repos" class="ms-controller" ms-controller="repos">
 		<ul   >
-			<li ms-each-r="rep"><div class="box">
+			<li ms-repeat-r="rep"><div class="box">
 				<a ms-href="{{r.git+r.title}}"><h3>{{r.title}}</h3></a>
-				<div ms-each-e="r.deoms">
+				<div ms-repeat-e="r.deoms">
 					<p>Ex{{$index+1}}: <a ms-href="{{r.gitio+r.title+'/'+e.dir}}" >{{e.name}}</a></p>
 				</div>
 			</div></li>			
