@@ -27,7 +27,7 @@
 		<ul   >
 			<li ms-repeat-r="rep"><div class="box">
 				<a ms-href="{{r.git+r.title}}"><h3>{{r.title}}</h3></a>
-				<div ms-repeat-e="r.deoms">
+				<div ms-repeat-e="r.demos">
 					<p>Ex{{$index+1}}: <a ms-href="{{r.gitio+r.title+'/'+e.dir}}" >{{e.name}}</a></p>
 				</div>
 			</div></li>			
@@ -49,14 +49,19 @@
 					title:"CA.Model.SOC",
 					git:"https://github.com/SenYu/",
 					gitio:"http://senyu.github.io/",
-					deoms:[	{name:"20*20, 30px",dir:"2D/"},
+					demos:[	{name:"20*20, 30px",dir:"2D/"},
 							{name:"40*40, 20px",dir:"2D/40/"},
 							{name:"40*40, 15px, Optional",dir:"2D/new/"} ]
 				},{
 					title:"Express_UI",
 					git:"https://github.com/SenYu/",
 					gitio:"http://senyu.github.io/",
-					deoms:[	{name:"UI_20140617",dir:"UI_20140617/"}]
+					demos:[	{name:"UI_20140617",dir:"UI_20140617/"}]
+				},{
+					title:"8nums",
+					git:"https://github.com/SenYu/",
+					gitio:"http://senyu.github.io/",
+					demos:[ {name:"八数码-双向宽搜",dir:"DBFS/"}]
 				}];
 			});
         </script>
