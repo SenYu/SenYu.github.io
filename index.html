@@ -19,9 +19,9 @@
 </head>
 <body class="zh_CN">
 	<div id="home" class="ms-controller" ms-controller="home">
-	<p>Hello World!    SenYu 's Github Home Page.</p>
-	<p>Sen Yu, Student from Dalian University of Technology, majored in Computer Sience, <a id="time">{{time}}</a> his two months Internship As a Front-End Developer at Alibaba Group from July 7, 2014 to August 29, 2014.</p>
-	<p>mailto:<a href="mailto:senyu@mail.dlut.edu.cn">senyu@mail.dlut.edu.cn</a></p>	
+	<p>Hi. This is Sen Yu</p>
+	<p>I am a senior of Dalian University of Technology (DLUT), majoring in Computer Science. Interested in Machine Learning and Front End Engineering.</p>
+	<p>If you are insterested in me, please contact me via <a href="mailto:senyu@mail.dlut.edu.cn">senyu(at)mail.dlut.edu.cn</a></p>	
 	</div>
 	<div id="repos" class="ms-controller" ms-controller="repos">
 		<ul   >
@@ -35,14 +35,7 @@
 	</div>
         <script>
 			var homeModel = avalon.define("home", function(vm) {
-				vm.time = {
-					get:function(){		
-						var d = new Date(), t = d.getTime(), r;
-						if(t < 1403712000000)	r = "will enjoy";
-						else if(t < 1408982400000)	r = "is enjoying";
-						else r = "has enjoyed";
-						return r;
-				}};
+			
 			});
 			var reposModel = avalon.define("repos", function(vm) {
 				vm.rep = [{
